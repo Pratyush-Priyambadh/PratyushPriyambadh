@@ -1,86 +1,110 @@
+** start of index.html **
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>freeCodeCamp Survey Form</title>
+<meta charset="UTF-8">
+<title>Playing Cards Flexbox</title>
+
+<style>
+    body {
+        background-color: #0b3d2e;
+        font-family: Arial, sans-serif;
+        padding: 40px;
+    }
+
+    /* MAIN CONTAINER */
+    #playing-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+        width: 160px;
+        height: 220px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    /* LEFT, MIDDLE, RIGHT */
+    .left {
+        align-self: flex-start;
+        font-size: 22px;
+    }
+
+    .middle {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 28px;
+    }
+
+    .right {
+        align-self: flex-end;
+        font-size: 22px;
+        transform: rotate(180deg);
+    }
+
+    .red {
+        color: red;
+    }
+</style>
 </head>
+
 <body>
 
-  <!-- Title -->
-  <h1 id="title">freeCodeCamp Survey Form</h1>
+<main id="playing-cards">
 
-  <!-- Description -->
-  <p id="description">
-    Thank you for taking the time to help us improve the platform
-  </p>
+    <div class="card">
+        <div class="left">A ♠</div>
+        <div class="middle">
+            <div>♠</div>
+            <div>♠</div>
+            <div>♠</div>
+        </div>
+        <div class="right">A ♠</div>
+    </div>
 
-  <!-- Form -->
-  <form id="survey-form">
+    <div class="card">
+        <div class="left red">K ♥</div>
+        <div class="middle red">
+            <div>♥</div>
+            <div>♥</div>
+            <div>♥</div>
+        </div>
+        <div class="right red">K ♥</div>
+    </div>
 
-    <!-- Name -->
-    <label id="name-label" for="name">Name</label><br>
-    <input 
-      type="text" 
-      id="name" 
-      name="name"
-      placeholder="Enter your name" 
-      required
-    ><br><br>
+    <div class="card">
+        <div class="left">7 ♣</div>
+        <div class="middle">
+            <div>♣</div>
+            <div>♣</div>
+            <div>♣</div>
+        </div>
+        <div class="right">7 ♣</div>
+    </div>
 
-    <!-- Email -->
-    <label id="email-label" for="email">Email</label><br>
-    <input 
-      type="email" 
-      id="email" 
-      name="email"
-      placeholder="Enter your email" 
-      required
-    ><br><br>
-
-    <!-- Number -->
-    <label id="number-label" for="number">Age (optional)</label><br>
-    <input 
-      type="number" 
-      id="number" 
-      name="age"
-      placeholder="Age"
-      min="10"
-      max="100"
-    ><br><br>
-
-    <!-- Dropdown -->
-    <p>Which option best describes your current role?</p>
-    <select id="dropdown" name="role">
-      <option value="">Select current role</option>
-      <option value="student">Student</option>
-      <option value="working">Working Professional</option>
-    </select><br><br>
-
-    <!-- Radio buttons -->
-    <p>Would you recommend freeCodeCamp to a friend?</p>
-    <input type="radio" name="recommend" value="definitely"> Definitely<br>
-    <input type="radio" name="recommend" value="maybe"> Maybe<br>
-    <input type="radio" name="recommend" value="not-sure"> Not sure<br><br>
-
-    <!-- Checkboxes -->
-    <p>What would you like to see improved? (Check all that apply)</p>
-    <input type="checkbox" value="frontend"> Front-end Projects<br>
-    <input type="checkbox" value="backend"> Back-end Projects<br>
-    <input type="checkbox" value="data-visualization"> Data Visualization<br>
-    <input type="checkbox" value="challenges"> Challenges<br><br>
-
-    <!-- Textarea -->
-    <p>Any comments or suggestions?</p>
-    <textarea 
-      placeholder="Enter your comment here..."
-      rows="4"
-      cols="40">
-    </textarea><br><br>
-
-    <!-- Submit -->
-    <button id="submit" type="submit">Submit</button>
-
-  </form>
+</main>
 
 </body>
 </html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+
+** end of styles.css **
+
+
